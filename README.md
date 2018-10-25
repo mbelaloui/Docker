@@ -2,10 +2,8 @@
 
 <h1>Docker</h1>
 
-	<h2>definition</h2>
-    <p>
+	definition
 		né du movement DevOps, est un outil qui permet de gérer des containers qui servirons a executé des applications dans des environements distincts.
-	</p>
 Cntenaire vm ??
 
     le containers par apport a une vm, va partager quelques fichiers avec le conetaire ou l'os dans le quel il est lancé.
