@@ -21,23 +21,23 @@ pour lancer une commande de docker machine il faut suivre ce shema :
 
 
 
-docker-machine creart machie_name ==> <pour cree un conteneurs docker>
-    on peut changer l'envirement dans le quel on va cree notre conteneurs via l'option --driver <nom_env> <ex --driver virtualbox>
-docker-machine ls ==> <lister les conteneurs existante>
+docker-machine creart machie_name ==> 'pour cree un conteneurs docker'
+    on peut changer l'envirement dans le quel on va cree notre conteneurs via l'option --driver 'nom_env' 'ex --driver virtualbox'
+docker-machine ls ==> 'lister les conteneurs existante'
 
-docker-machine rm machie_name ==> <supprimer machie_name>
+docker-machine rm machie_name ==> 'supprimer machie_name'
 
-docker-machine start ==> <demarer le conteneurs machie_name>
+docker-machine start ==> 'demarer le conteneurs machie_name'
 
-docker-machine stop ==> <arreter le conteneurs machie_name>
+docker-machine stop ==> 'arreter le conteneurs machie_name'
 
-docker-machine status ==> <arreter le conteneurs machie_name>
+docker-machine status ==> 'arreter le conteneurs machie_name'
 
-docker-machine ip ==> <recuperer les ips du conteneurs machie_name>
+docker-machine ip ==> 'recuperer les ips du conteneurs machie_name'
 
-docker-machine url machie_name ==> <recuperer l'url du conteneurs machie_name>
+docker-machine url machie_name ==> 'recuperer l'url du conteneurs machie_name'
 
-eval "($docker-machine machie_name)"  ==> <pour assigner les variables specifique a docker dans le terminal>
+eval "($docker-machine machie_name)"  ==> 'pour assigner les variables specifique a docker dans le terminal'
     NB : en changant le nom de l'environement passer a la commande eval, on peut lancer nos conteneurs laiileur dans le cloud par exemple !!!
 
 
