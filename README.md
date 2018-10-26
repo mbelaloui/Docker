@@ -2,12 +2,11 @@
 
 <h1>Docker</h1>
 
-	definition
-		né du movement DevOps, est un outil qui permet de gérer des conteneurs tainers qui servirons a executé des applications dans des environements distincts.
-Conteneur vm ??
+	c'est quoi docker ??
+		né du movement DevOps, est un outil qui permet de gérer des conteneurs qui servirons a executé des applications de manière isolé dans des environements distincts.
+Conteneur <==> vm ??
 
-    le conteneurs par apport a une vm, va partager quelques fichiers avec le conteneurs ou l'os dans le quel il est lancé.
-
+    le conteneur par apport a une vm va partager quelques fichiers avec le conteneurs ou l'os dans le quel il est lancé, alors que la vm est totalement isole de son environement.
 
 pour lancer une commande de docker machine il faut suivre ce shema :
 
@@ -18,8 +17,6 @@ pour lancer une commande de docker machine il faut suivre ce shema :
         --help      afficher le help
 
     commande :
-
-
 
 docker-machine creart machie_name ==> 'pour cree un conteneurs docker'
     on peut changer l'envirement dans le quel on va cree notre conteneurs via l'option --driver 'nom_env' 'ex --driver virtualbox'
