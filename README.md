@@ -59,7 +59,7 @@ pour lancer une commande de docker machine il faut suivre ce shema :
 
         docker-machine url machie_name ==> 'recuperer l'url du conteneurs machie_name'
 
-        eval "($docker-machine machie_name)"  ==> 'pour assigner les variables specifique a docker dans le terminal'
+        eval "($docker-machine env machie_name)"  ==> 'pour assigner les variables specifique a docker dans le terminal'
             NB : en changant le nom de l'environement passer a la commande eval, on peut lancer nos conteneurs laiileur dans le cloud par exemple !!!
 
 
@@ -69,3 +69,4 @@ pour lancer une commande de docker machine il faut suivre ce shema :
 sources :
  - https://lucasvidelaine.wordpress.com/2018/01/29/utilisation-de-dockerhub/
  - https://www.wanadev.fr/24-tuto-docker-demarrer-docker-partie-2/
+ - https://linuxfr.org/news/docker-tutoriel-pour-manipuler-les-conteneurs

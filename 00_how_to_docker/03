@@ -1,1 +1,1 @@
-eval "$(docker-machine Char)"
+eval "$(docker-machine env Char)"
