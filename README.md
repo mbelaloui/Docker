@@ -2,11 +2,36 @@
 
 <h1>Docker</h1>
 
-	c'est quoi docker ??
+	<h2>c'est quoi docker ??</h2>
 		né du movement DevOps, est un outil qui permet de gérer des conteneurs qui servirons a executé des applications de manière isolé dans des environements distincts.
 Conteneur <==> vm ??
 
     le conteneur par apport a une vm va partager quelques fichiers avec le conteneurs ou l'os dans le quel il est lancé, alors que la vm est totalement isole de son environement.
+
+images:
+
+    contient les elements qu'on a decide d'installer dans notre conteneur, en executant une image on lance un conteneur. Les images sont creees a partir de fichiers de configuration nommes <Dockerfiles>.
+
+Dockerfile:
+
+    est le fichier sources qui va nous permettre de creer une images, il peut contenir d'autres dockerfiles, ou contenue dans d'autres dockerfiles.
+
+Compose:
+
+    est un outil pour executer et definir des applications multi-conteneurs.
+
+Volumes:
+
+    nous permet de sauvegarder des donnees generees par des conteures, ils ont la carecteristique de simlifier la sauvegarde et la migration de donnees.
+
+Docker Swarm:
+
+    permet de faciliter la montee en charge et de garantir une haute disponibilite des conteuneurs lors de leur mise en production.
+
+Kubernetes:
+
+    developper par google, et une sollution alternative pour swarm, peut cotpyer de facon native swarm dans docker.
+
 
 pour lancer une commande de docker machine il faut suivre ce shema :
 
