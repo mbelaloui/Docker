@@ -6,7 +6,7 @@
 		né du movement DevOps, est un outil qui permet de gérer des conteneurs qui servirons a executé des applications de manière isolé dans des environements distincts.
 Conteneur <==> vm ??
 
-    le conteneur par apport a une vm va partager quelques fichiers avec le conteneurs ou l'os dans le quel il est lancé, alors que la vm est totalement isole de son environement.
+    Le conteneur par apport a une vm va partager quelques fichiers avec l'os dans le quel il est lancé, alors que la vm est totalement isole de son environement. Le conteneur permet de garantir la maitrise de l'environement d'execution de l'application dans le conteneur
 
 images:
 
