@@ -2,7 +2,7 @@
 
 <h1>Docker</h1>
 
-	<h2>c'est quoi docker ??</h2>
+	c'est quoi docker ??
 		né du movement DevOps, est un outil qui permet de gérer des conteneurs qui servirons a executé des applications de manière isolé dans des environements distincts.
 Conteneur <==> vm ??
 
