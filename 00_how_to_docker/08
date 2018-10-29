@@ -1,0 +1,4 @@
+docker run -it --rm alpine
+
+# -i to keep STDIN open
+# -t to make the container look like a terminal connection session

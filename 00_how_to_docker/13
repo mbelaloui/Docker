@@ -1,0 +1,1 @@
+docker inspect spawning-pool -f '{{json .Config.Env}} {{range .Mounts}}{{.}}{{end}} {{json .HostConfig.RestartPolicy}}'

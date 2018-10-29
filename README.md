@@ -42,7 +42,7 @@ Compose:
 
 Volumes:
 
-    nous permet de sauvegarder des donnees generees par des conteures, ils ont la carecteristique de simlifier la sauvegarde et la migration de donnees.
+    nous permet de sauvegarder des donnees generees par des conteures, ils ont la carecteristique de simplifier la sauvegarde et la migration de donnees.
 
 Docker Swarm:
 
@@ -125,6 +125,27 @@ pour lancer une commande de docker engine il faut suivre ce shema :
         docker restart <id/nom conteneur> ==> 'redemmarer le conteuneur'
 
         docker inspect <id/nom conteneur> ==> 'desciption detaillee du conteuneur'
+
+pour lancer une commande de docker volume il faut suivre ce shema :
+
+    docker volume [opions] commande
+
+    options :
+        docker --help
+
+    commande :
+
+    docker volume creart volume_name ==> 'pour cree un espace de stockage"
+
+    docker volume inspect volume_name ==> 'pour afficher les informations detailler sur le volume_name'
+
+    docker volume ls ==> 'lister les volumes'
+    
+    docker volume rm volume_name ==> 'supprimer un volume'
+    
+    docker volume prune ==> 'supprimer tout les volumes unitiliser'
+
+
 
 sources :
     - https://lucasvidelaine.wordpress.com/2018/01/29/utilisation-de-dockerhub/
