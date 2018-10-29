@@ -1,0 +1,5 @@
+apt -y update && apt -y upgrade && apt -y install git && apt -y install gcc
+
+#comment on peut le tester ?? 
+
+#du gent docker run --rm debian apt -y update

@@ -58,8 +58,7 @@ pour lancer une commande de docker machine il faut suivre ce shema :
     docker-machine [opions] commande [arg]
 
     options :
-        --debug     activer le mode debug
-        --help      afficher le help
+        docker-machine --help
 
     commande :
     
@@ -93,9 +92,39 @@ pour lancer une commande de docker machine il faut suivre ce shema :
         docker-machine url machie_name ==> 'recuperer l'url de la machine machie_name'
 
         
+pour lancer une commande de docker engine il faut suivre ce shema :
+
+    docker [opions] commande [arg]
+
+    options :
+        docker --help
+
+    commande :
 
 
+        docker pull <image> ==> pour recuperer une images sans la lancer
 
+        docker images ==> pour lister les images presentes sur la machine
+
+        docker run <image> ==> pour executer une image
+                run -i pour ouvrire STDIN
+                run -t pour pouvoir interagir avec le conteur dans un shell
+                run -d pour lancer le conteneur en ariere plan
+        
+        docker ps ==> lister tout les conteuneurs actifs
+                ps -a pour lister tout les conteur meme seux qui ne sont pas actif
+        
+        docker rm <id/nom conteneur> ==> supprimer un conteuneur arrete
+
+        docker rmi <imager> ==> supprimer une image
+
+        docker start <id/nom conteneur> ==> 'demmarer le conteuneur'
+
+        docker stop <id/nom conteneur>==> 'arreter le conteuneur'
+
+        docker restart <id/nom conteneur> ==> 'redemmarer le conteuneur'
+
+        docker inspect <id/nom conteneur> ==> 'desciption detaillee du conteuneur'
 
 sources :
     - https://lucasvidelaine.wordpress.com/2018/01/29/utilisation-de-dockerhub/
