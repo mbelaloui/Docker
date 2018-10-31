@@ -1,1 +1,1 @@
-docker inspect spawning-pool -f '{{json .Config.Env}} {{range .Mounts}}{{.}}{{end}} {{json .HostConfig.RestartPolicy}}'
+docker inspect spawning-pool -f='{{join .Config.Env "\n"}}'

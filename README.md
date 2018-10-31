@@ -18,9 +18,9 @@ docker engine
 docker-machine
 
     une sur couche de docker engine qui lui permet de s'executer de maniere trasparente dans divers os, on utilise docker-machine pour cree et gerer des hosts docker engine.
-    docker machine a son propre CLI <docker-machine> et le docker engine clien.
-    il s'ufffit de faire  pointer la Commande ligne interface <CLI> de docker-machine a notre conteneur host <docker engine> afin d'utiliser directement la commande "docker" et ce avec <docker-machine env machie_name>.
-    les docker host peuvent etre local, ou  non
+    docker machine a son propre CLI <docker-machine> et le docker engine client.
+    Il s'ufffit de faire  pointer la Commande ligne interface <CLI> de docker-machine a notre conteneur host <docker engine> afin d'utiliser directement la commande "docker" et ce avec <docker-machine env machie_name>.
+    les docker host peuvent etre local, ou non.
 
 
 
@@ -46,7 +46,7 @@ Volumes:
 
 Docker Swarm:
 
-    permet de faciliter la montee en charge et de garantir une haute disponibilite des conteuneurs lors de leur mise en production.
+    permet de faciliter la montee en charge et de garantir une haute disponibilite des conteuneurs lors de leurs mise en production.
 
 Kubernetes:
 

@@ -1,4 +1,1 @@
 eval "$(docker-machine env Char)"
-
-
-#meme chose <docker-machine env Char>
