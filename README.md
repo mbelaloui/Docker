@@ -30,11 +30,34 @@ Conteneur <==> vm ??
 
 images:
 
-    contient les elements qu'on a decide d'installer dans notre conteneur, en executant une image on lance un conteneur. Les images sont creees a partir de fichiers de configuration nommes <Dockerfiles>.
+    contient les elements de configuration de notre environement, en executant une image on lance un conteneur. Les images sont creees a partir de fichiers de configuration nommes <Dockerfiles>.
 
 Dockerfile:
 
-    est le fichier sources qui va nous permettre de creer une images, il peut contenir d'autres dockerfiles, ou contenue dans d'autres dockerfiles.
+    est le fichier sources qui va nous permettre de creer une images, cette image est isole du reste de son environement donc on doit lui ajouter des liens <mapping ports> vers l'exterieure, et specifier les fichiere qu'on va copiere a l'interieure de l'environement pour les utilisr, cette configuration nous permet de garantire le comportement de notre application quelque soit l'environement dans lequel on l'execut 
+        structure du dockerfile :
+
+            # Use an official Python runtime as a parent image
+            FROM python:2.7-slim
+
+            # Set the working directory to /app
+            WORKDIR /app
+
+            # Copy the current directory contents into the container at /app
+            COPY . /app
+
+            # Install any needed packages specified in requirements.txt
+            RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+            # Make port 80 available to the world outside this container
+            EXPOSE 80
+
+            # Define environment variable
+            ENV NAME World
+
+            # Run app.py when the container launches
+            CMD ["python", "app.py"]
+
 
 Compose:
 
@@ -110,7 +133,11 @@ pour lancer une commande de docker engine il faut suivre ce shema :
                 run -i pour ouvrire STDIN
                 run -t pour pouvoir interagir avec le conteur dans un shell
                 run -d pour lancer le conteneur en ariere plan
-        
+                -p   port host/ port conteneur 
+                    pour mapper le       conteneur avec la machine host
+                -v dir_1:dir2 ==>
+                     dir1 le dossier que l'on veut partager depuis notre host
+                     dir2 le dossier avec lequel on veut le reliere dans le conteneur
         docker ps ==> lister tout les conteuneurs actifs
                 ps -a pour lister tout les conteur meme seux qui ne sont pas actif
         
@@ -153,3 +180,4 @@ sources :
     - https://linuxfr.org/news/docker-tutoriel-pour-manipuler-les-conteneurs
     - http://blog.ippon.fr/2014/10/20/docker-pour-les-nu-pour-les-debutants/
     - https://www.lebigdata.fr/docker-definition
+    - https://medium.freecodecamp.org/docker-easy-as-build-run-done-e174cc452599
