@@ -1,41 +1,5 @@
-FROM python:2-slim
+docker run --name=Abathur -v /home/:/root/ -p 3000:3000 -it python:2-slim
 
-# Set the working directory to /app
-WORKDIR /app
+docker exec Abathur pip install flask
 
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
-
-
-
-
-
-
-
-#docker run\
- #   -i -t\
- #   --rm\
- #   --name=Abathur\
- #   -v /root:/home\
- #   -p 3000:3000\
- #   python:2-slim
-
-    #reste a voir si je doit instaler python2 dasn 
-    #un contenire
-    #
-    #ou
-    #
-    #je peut instaler flask directement 
-    #dasn un conteneur python
+docker exec -e FLASK_APP=/root/hello.py Abathur flask run -p 3000 
