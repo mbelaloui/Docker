@@ -3,3 +3,5 @@ docker run --name=Abathur -v /home/:/root/ -p 3000:3000 -it python:2-slim
 docker exec Abathur pip install flask
 
 docker exec -e FLASK_APP=/root/hello.py Abathur flask run -p 3000 
+
+# n'arrive pas a le faire marcher

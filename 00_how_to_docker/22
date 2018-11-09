@@ -1,0 +1,5 @@
+eval "$(docker-machine env Char)"
+token=$(docker swarm join-token worker | grep "\-\-token" | awk -F " " '{print $5}')
+ip_lead=$(docker swarm join-token worker | grep "\-\-token" | awk -F " " '{print $6}')
+eval "$(docker-machine env Aiur)"
+docker swarm join --token $token $ip_lead
