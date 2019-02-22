@@ -18,11 +18,7 @@ docker engine
 docker-machine
 
     une sur couche de docker engine qui lui permet de s'executer de maniere trasparente dans divers os, on utilise docker-machine pour cree et gerer des hosts docker engine.
-    docker machine a son propre CLI <docker-machine> et le docker engine client aussi.
-    Il s'ufffit de faire  pointer la Commande ligne interface <CLI> de docker-machine a notre conteneur host <docker engine> afin d'utiliser directement la commande "docker" et ce avec <docker-machine env machie_name>.
-    les docker host peuvent etre local, ou non.
-
-
+    La docker-machine va nous permettre de créer un environnement dans lequel on exécutera nos conteurs.
 
 Conteneur <==> vm ??
 
@@ -34,7 +30,7 @@ images:
 
 Dockerfile:
 
-    est le fichier sources qui va nous permettre de creer une images, cette image est isole du reste de son environement donc on doit lui ajouter des liens <mapping ports> vers l'exterieure, et specifier les fichiere qu'on va copiere a l'interieure de l'environement pour les utilisr, cette configuration nous permet de garantire le comportement de notre application quelque soit l'environement dans lequel on l'execut 
+    est le fichier sources qui va nous permettre de creer une images, cette image est isole du reste de son environement donc on doit lui ajouter des liens <mapping ports> vers l'exterieure, et specifier les fichiere qu'on va copiere a l'interieure de l'environement pour les utiliser, cette configuration nous permet de garantire le comportement de notre application quelque soit l'environement dans lequel on l'execut.
         structure du dockerfile :
 
             # Use an official Python runtime as a parent image
@@ -68,22 +64,21 @@ Dockerfile:
             WORKDIR /app
 
 
-
 Compose:
 
     est un outil pour executer et definir des applications multi-conteneurs.
 
 Volumes:
 
-    nous permet de sauvegarder des donnees generees par des conteures, ils ont la carecteristique de simplifier la sauvegarde et la migration de donnees.
+    nous permet de sauvegarder des données generées par des conteures, ils ont la carecteristique de simplifier la sauvegarde et la migration de données.
 
 Docker Swarm:
 
-    permet de faciliter la montee en charge et de garantir une haute disponibilite des conteuneurs lors de leurs mise en production.
+    permet de faciliter la montée en charge et de garantir une haute disponibilité des conteuneurs lors de leurs mise en production.
 
 Kubernetes:
 
-    developper par google, et une sollution alternative pour swarm, peut cotpyer de facon native swarm dans docker.
+    developper par google, et une sollution alternative pour swarm, peut côtoyer de facon native swarm dans docker.
 
 
 pour lancer une commande de docker machine il faut suivre ce shema :
@@ -95,20 +90,16 @@ pour lancer une commande de docker machine il faut suivre ce shema :
 
     commande :
     
-        docker-machine creart --driver virtualbox machie_name ==> 'pour cree une machine virtuelle' cette coamnde va telecharger une version light de linux boot2docker avec un deaon docker installer, cree et salnce virtualbox avec docker demarer
-            dans cette commande on peut changer l'envirement dans le quel on va cree notre conteneurs via l'option --driver 'nom_env' 'ex --driver virtualbox'
+        docker-machine creart --driver virtualbox machie_name ==> 'pour cree une machine virtuelle' cette commande va telecharger une version light de linux boot2docker avec un deamon docker installer,
+        dans cette commande on peut changer l'envirement dans le quel on va cree notre conteneurs via l'option --driver 'nom_env' 'ex --driver virtualbox'
 
          on doit dire au shell de comuniquer avec la nouvelle machine, avec :
         
-            docker-machine env machine_name
-
-        puis conecter notre shell a la nouvelle machine:
-
             eval "($docker-machine env machie_name)"  ==> 'pour assigner les variables specifique a docker dans le terminal'
         
-        apre ca on poura executer les commande docker sasn problemes 
+        apre ca on poura executer les commande docker sans problemes 
 
-        NB : on devera repeter ces action des qu'on ouvre un nouveu shell ou qu'on redemare la mahcine 
+        NB : on devera repeter cette action des qu'on ouvre un nouveu shell ou qu'on redemare la mahcine 
 
         docker-machine ls ==> 'lister des machine existantes'
 
@@ -134,10 +125,9 @@ pour lancer une commande de docker engine il faut suivre ce shema :
 
     commande :
 
-
         docker pull <image> ==> pour recuperer une images sans la lancer
 
-        docker images ==> pour lister les images presentes sur la machine
+        docker images ls ==> pour lister les images presentes sur la machine
 
         docker run <image> ==> pour executer une image
                 run -i pour ouvrire STDIN
@@ -147,7 +137,7 @@ pour lancer une commande de docker engine il faut suivre ce shema :
                     pour mapper le       conteneur avec la machine host
                 -v dir_1:dir2 ==>
                      dir1 le dossier que l'on veut partager depuis notre host
-                     dir2 le dossier avec lequel on veut le reliere dans le conteneur
+                     dir2 le dossier avec lequel on veut le relier dans le conteneur
         docker ps ==> lister tout les conteuneurs actifs
                 ps -a pour lister tout les conteur meme seux qui ne sont pas actif
         
@@ -191,6 +181,3 @@ sources :
     - http://blog.ippon.fr/2014/10/20/docker-pour-les-nu-pour-les-debutants/
     - https://www.lebigdata.fr/docker-definition
     - https://medium.freecodecamp.org/docker-easy-as-build-run-done-e174cc452599
-
-
-a tester 19, [24, 30]
