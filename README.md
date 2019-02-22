@@ -4,7 +4,7 @@
 
 	c'est quoi docker ??
 		né du movement DevOps, est un outil qui permet de gérer des conteneurs qui servirons a executé des applications de manière isolé dans des environements distincts.
-        docker permet une abstration total de l'environement d'execution, on utilisera les memes commandes dans os/linux/windows pour manipuler des conteurs. docker est directement integre au niveux du kernel de linux, ce qui nous permet de l'utiliser sans sur couche, toute fois il est primordiale d'avoir la docker machine dans windows et os.
+        docker permet une abstration total de l'environement d'execution, on utilisera les memes commandes dans os/linux/windows pour manipuler des conteurs. docker est directement integre au niveux du kernel de linux, ce qui nous permet de l'utiliser sans sur couche, toute fois il est primordiale d'avoir la docker machine dans windows et MAC-os.
         actuellement il ya une application docker pour windows et application docker pour os qui nous perment de l'excuter sans la docker machine. toute fois on aura besoin de la docker-macine dans tout les cas pour gerer plusieur docker host sur le reseau, le cloud ou localement de maniere efficace.        
 
 docker engine
@@ -18,7 +18,7 @@ docker engine
 docker-machine
 
     une sur couche de docker engine qui lui permet de s'executer de maniere trasparente dans divers os, on utilise docker-machine pour cree et gerer des hosts docker engine.
-    docker machine a son propre CLI <docker-machine> et le docker engine client.
+    docker machine a son propre CLI <docker-machine> et le docker engine client aussi.
     Il s'ufffit de faire  pointer la Commande ligne interface <CLI> de docker-machine a notre conteneur host <docker engine> afin d'utiliser directement la commande "docker" et ce avec <docker-machine env machie_name>.
     les docker host peuvent etre local, ou non.
 
