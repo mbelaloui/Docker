@@ -12,7 +12,12 @@ RUN			mkdir Project && cd Project
 RUN			pwd
 RUN			ls
 RUN			rails new first_app
+#RUN         bundle
 RUN			ls
+RUN			rails db:migrate
+RUN			ls first_app
+#RUN         rails server
+
 #docker image build -t ft-rails
 #docker run --rm -p 30033:30033 -it ft-rails
 
