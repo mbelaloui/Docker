@@ -1,32 +1,33 @@
 FROM ruby
 
-MAINTAINER Juan Casian <jcasian@student.42.us.org>
+RUN apt -y update
+RUN apt -y upgrade
+RUN gem install rails
 
-RUN apt-get update -y && apt-get install -y build-essential libpq-dev nodejs sqlite3
+RUN rails new app
+WORKDIR /app
+RUN bundle install
 
-ONBUILD COPY app /opt/app
-ONBUILD WORKDIR /opt/app
-
-#The ONBUILD command adds the instruction to work until the img is used as base of another build
-
-ONBUILD EXPOSE 3000
-ONBUILD RUN bundle install
-ONBUILD RUN rake db:migrate
-ONBUILD RUN rake db:seed
+RUN bundle exec rake test
+RUN bundle exec rails server
 
 
+#ONBUILD RUN exec rake db:migrate && rake db:seed
 
 #FROM		ruby
 
-#EXPOSE      3000
-#RUN         ruby -v
 #RUN         apt -y update
 #RUN         apt -y upgrade
+#RUN         apt install -y nodejs postgresql-client
+
 #RUN         gem install rails
 #RUN			rails new /opt/app
-#--skip-test --skip-bundle --database=postgresql
 #WORKDIR     /opt/app
-#RUN         bundle install
+#RUN         bundle install --path vendor/cache
+#RUN         gem install rake && bundle install
+
+
+#RUN         rails server
 #RUN         rails db:migrate
 
 #bundle
