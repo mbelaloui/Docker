@@ -1,6 +1,7 @@
 FROM		debian
 
 LABEL       MAINTAINER="mbelalou@student.42.fr"
+
 WORKDIR     /home
 
 RUN			apt update -y
