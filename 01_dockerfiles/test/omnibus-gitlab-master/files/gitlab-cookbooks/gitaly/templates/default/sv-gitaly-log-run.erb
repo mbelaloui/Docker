@@ -1,2 +1,0 @@
-#!/bin/sh
-exec svlogd <% unless node['gitaly']['logging_format'].eql?('json') %>-tt <% end %><%= @options[:log_directory] %>
