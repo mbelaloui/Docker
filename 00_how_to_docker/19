@@ -1,5 +1,5 @@
 docker run --name=Abathur -v ${PWD}:/root/ -p 3000:3000 -it --rm python:2-slim
-
+#docker run --name=Abathur -v ~/docker_19:/root/ -p 3000:3000 -it --rm python:2-slim
 docker exec Abathur pip install flask
 
 #docker exec -e FLASK_APP=/root/hello.py Abathur flask run -p 3000 
