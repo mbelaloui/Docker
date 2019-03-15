@@ -1,0 +1,69 @@
+gitlab-rails:
+  remote: "git@dev.gitlab.org:gitlab/gitlabhq.git"
+  alternative: "https://gitlab.com/gitlab-org/gitlab-ce.git"
+gitlab-rails-ee:
+  remote: "git@dev.gitlab.org:gitlab/gitlab-ee.git"
+  alternative: "https://gitlab.com/gitlab-org/gitlab-ee.git"
+gitlab-shell:
+  remote: "git@dev.gitlab.org:gitlab/gitlab-shell.git"
+  alternative: "https://gitlab.com/gitlab-org/gitlab-shell.git"
+gitlab-workhorse:
+  remote: "git@dev.gitlab.org:gitlab/gitlab-workhorse.git"
+  alternative: "https://gitlab.com/gitlab-org/gitlab-workhorse.git"
+gitlab-pages:
+  remote: "git@dev.gitlab.org:gitlab/gitlab-pages.git"
+  alternative: "https://gitlab.com/gitlab-org/gitlab-pages.git"
+gitlab-monitor:
+  remote: "git@dev.gitlab.org:gitlab-org/gitlab-monitor.git"
+  alternative: "https://gitlab.com/gitlab-org/gitlab-monitor.git"
+docker-distribution-pruner:
+  remote: "git@dev.gitlab.org:gitlab/docker-distribution-pruner.git"
+  alternative: "https://gitlab.com/gitlab-org/docker-distribution-pruner.git"
+config_guess:
+  remote: "git@dev.gitlab.org:omnibus-mirror/config_guess.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/config_guess.git"
+omnibus:
+  remote: "https://dev.gitlab.org/gitlab/omnibus.git"
+  alternative: "https://gitlab.com/gitlab-org/omnibus.git"
+registry:
+  remote: "git@dev.gitlab.org:omnibus-mirror/distribution.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/distribution.git"
+rb-readline:
+  remote: "git@dev.gitlab.org:omnibus-mirror/rb-readline.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/rb-readline.git"
+prometheus:
+  remote: "git@dev.gitlab.org:omnibus-mirror/prometheus.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/prometheus.git"
+alertmanager:
+  remote: "git@dev.gitlab.org:omnibus-mirror/alertmanager.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/alertmanager.git"
+node-exporter:
+  remote: "git@dev.gitlab.org:omnibus-mirror/node_exporter.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/node_exporter.git"
+postgres-exporter:
+  remote: "git@dev.gitlab.org:omnibus-mirror/postgres_exporter.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/postgres_exporter.git"
+redis-exporter:
+  remote: "git@dev.gitlab.org:omnibus-mirror/redis_exporter.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/redis_exporter.git"
+pgbouncer-exporter:
+  remote: "git@dev.gitlab.org:omnibus-mirror/pgbouncer_exporter.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/pgbouncer_exporter.git"
+gitaly:
+  remote: 'git@dev.gitlab.org:gitlab/gitaly'
+  alternative: 'https://gitlab.com/gitlab-org/gitaly'
+gitlab-elasticsearch-indexer:
+  remote: 'git@dev.gitlab.org:gitlab/gitlab-elasticsearch-indexer.git'
+  alternative: 'https://gitlab.com/gitlab-org/gitlab-elasticsearch-indexer.git'
+logrotate:
+  remote: "git@dev.gitlab.org:omnibus-mirror/logrotate.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/logrotate.git"
+chef-acme:
+  remote: "git@dev.gitlab.org:omnibus-mirror/chef-acme.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/chef-acme.git"
+nginx-module-vts:
+  remote: "git@dev.gitlab.org:omnibus-mirror/nginx-module-vts.git"
+  alternative: "https://gitlab.com/gitlab-org/build/omnibus-mirror/nginx-module-vts.git"
+prometheus-storage-migrator:
+  remote: "git@dev.gitlab.org:omnibus-mirror/prometheus-storage-migrator.git"
+  alternative: "https://gitlab.com/gitlab-org/prometheus-storage-migrator.git"

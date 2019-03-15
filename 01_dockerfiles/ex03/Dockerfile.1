@@ -20,3 +20,57 @@ EXPOSE 443 80 22
 #RUN gitlab-ctl reconfigure
 
 #ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && tail -f /dev/null
+
+
+
+
+
+
+Running handlers:
+There was an error running gitlab-ctl reconfigure:
+
+Multiple failures occurred:
+* Mixlib::ShellOut::ShellCommandFailed occurred in chef run: bash[migrate gitlab-rails database] (gitlab::database_migrations line 51) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of "bash"  "/tmp/chef-script20190315-15-17zlkpd" ----
+STDOUT: rake aborted!
+TZInfo::DataSourceNotFound: No source of timezone data could be found.
+Please refer to http://tzinfo.github.io/datasourcenotfound for help resolving this error.
+/opt/gitlab/embedded/service/gitlab-rails/config/application.rb:5:in `<top (required)>'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `require'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `<top (required)>'
+/opt/gitlab/embedded/bin/bundle:23:in `load'
+/opt/gitlab/embedded/bin/bundle:23:in `<main>'
+
+Caused by:
+TZInfo::ZoneinfoDirectoryNotFound: None of the paths included in TZInfo::ZoneinfoDataSource.search_path are valid zoneinfo directories.
+/opt/gitlab/embedded/service/gitlab-rails/config/application.rb:5:in `<top (required)>'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `require'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `<top (required)>'
+/opt/gitlab/embedded/bin/bundle:23:in `load'
+/opt/gitlab/embedded/bin/bundle:23:in `<main>'
+(See full trace by running task with --trace)
+STDERR:
+---- End output of "bash"  "/tmp/chef-script20190315-15-17zlkpd" ----
+Ran "bash"  "/tmp/chef-script20190315-15-17zlkpd" returned 1
+* Mixlib::ShellOut::ShellCommandFailed occurred in delayed notification: execute[clear the gitlab-rails cache] (gitlab::gitlab-rails line 399) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of /opt/gitlab/bin/gitlab-rake cache:clear ----
+STDOUT:
+STDERR: rake aborted!
+TZInfo::DataSourceNotFound: No source of timezone data could be found.
+Please refer to http://tzinfo.github.io/datasourcenotfound for help resolving this error.
+/opt/gitlab/embedded/service/gitlab-rails/config/application.rb:5:in `<top (required)>'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `require'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `<top (required)>'
+/opt/gitlab/embedded/bin/bundle:23:in `load'
+/opt/gitlab/embedded/bin/bundle:23:in `<main>'
+
+Caused by:
+TZInfo::ZoneinfoDirectoryNotFound: None of the paths included in TZInfo::ZoneinfoDataSource.search_path are valid zoneinfo directories.
+/opt/gitlab/embedded/service/gitlab-rails/config/application.rb:5:in `<top (required)>'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `require'
+/opt/gitlab/embedded/service/gitlab-rails/Rakefile:5:in `<top (required)>'
+/opt/gitlab/embedded/bin/bundle:23:in `load'
+/opt/gitlab/embedded/bin/bundle:23:in `<main>'
+(See full trace by running task with --trace)
+---- End output of /opt/gitlab/bin/gitlab-rake cache:clear ----
+Ran /opt/gitlab/bin/gitlab-rake cache:clear returned 1
