@@ -10,7 +10,7 @@
 docker engine
 
     est le client-serveur qui contien le docker demon, l'api rest et le clinet docker CLI, docker engine accept les commande tell que:
-        - docker ps pour afficher la list des conteurn en cours d'execution.
+        - docker ps pour afficher la list des conteurs en cours d'execution.
         - docker run <image> pour lancer une nouvelle instance d'une image.
         - docker ls pour lister les image.
         etc...
@@ -181,7 +181,3 @@ sources :
     - http://blog.ippon.fr/2014/10/20/docker-pour-les-nu-pour-les-debutants/
     - https://www.lebigdata.fr/docker-definition
     - https://medium.freecodecamp.org/docker-easy-as-build-run-done-e174cc452599
-
-problemes
-19
-
